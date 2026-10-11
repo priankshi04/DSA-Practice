@@ -27,4 +27,4 @@ class Solution:
             nums1[k]=nums2[n-1]
             n-=1
             k-=1
-
+        return nums1
