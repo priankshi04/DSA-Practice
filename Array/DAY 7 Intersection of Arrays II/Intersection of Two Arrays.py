@@ -1,7 +1,7 @@
 class Solution(object):
     def intersection(self, nums1, nums2):
         answer=[]
-#same approach but need to remove repeating appearing values
+#same approach as intersection of 2 arrays but need to remove repeating appearing values
         for i in range(len(nums1)):
             for j in range(len(nums2)):
                 if nums1[i]== nums2[j]:
