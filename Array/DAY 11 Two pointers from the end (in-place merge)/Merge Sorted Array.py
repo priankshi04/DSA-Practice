@@ -21,7 +21,7 @@ class Solution:
             else:
                 nums1[k]= nums2[n-1]
                 n-=1
-            k-=1
+            k-=1# need to decrease it regardless of comparison
         # filling nums1 with remaining values in nums2 
         while n>0:
             nums1[k]=nums2[n-1]
