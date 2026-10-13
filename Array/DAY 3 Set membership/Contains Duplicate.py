@@ -28,11 +28,12 @@ class Solution(object):
                 fast= slow+1
         return False
         """
-        seen = set() # used set
+        hashmap={} # using dictionary
         for num in nums: # to get each element from the list
-            if num in seen: # to check if the element is already in the list
+            if num in hashmap: # to check if the element is already in the dict
                 return True
-            seen.add(num) # else need to add that number in the seen
+            else:
+                hashmap[num]=1# else need to add that number in the  hashmap any gave the value as 1
         return False
 
 
