@@ -11,3 +11,14 @@ class Solution(object):
         if goal in combine:
             return True
         return False
+        # using hashmap approach
+        if len(s) != len(goal):
+            return False
+
+        for i in range(len(s)):
+            rotated = s[i:] + s[:i]
+
+            if rotated == goal:
+                return True
+
+        return False
