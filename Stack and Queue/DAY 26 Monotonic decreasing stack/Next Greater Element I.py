@@ -1,21 +1,21 @@
 class Solution(object):
-    def validateStackSequences(self, pushed, popped):
+    def nextGreaterElement(self, nums1, nums2):
         """
-        :type pushed: List[int]
-        :type popped: List[int]
-        :rtype: bool
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
         """
-        n= len(pushed)
-        stack = [0]*n
-        top=-1 # initial stack index empty
-        j = 0
-
-        for i in range(n):
-            top+=1 # increasing the stack index
-            stack[top] = pushed[i] # pushing element to stack
-
-            while top>=0 and j<n and stack[top]==popped[j]:
-                top-=1
-                j += 1
-
-        return top == -1
+        n=len(nums2)
+        m=len(nums1)
+        ans=[-1]*m
+        stack=[0]*n
+        top=-1
+        for i in range(m):
+            for j in range(n):
+                if nums1[i]==nums2[j]:#to find the same no in nums2 if found
+                    for k in range(j+1,n): #check its right value , if greater than the no , store it and stop the code
+                        if nums2[k]>nums2[j]:
+                            ans[i]=nums2[k]
+                            break
+                    break #else return -1
+        return ans
