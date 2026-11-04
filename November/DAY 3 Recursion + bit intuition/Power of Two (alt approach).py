@@ -3,7 +3,7 @@ class Solution(object):
         """
         :type n: int
         :rtype: bool
-
+        """
         #BRUTE FORCE
         if n <=0:
             return False
@@ -16,6 +16,6 @@ class Solution(object):
         return n>0 and(n&(n-1))==0
         TC:O(1)
         SC:O(1)
-        """
+        
         # Alternate approach
         return n > 0 and 1073741824 % n == 0
