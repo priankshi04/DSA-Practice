@@ -3,7 +3,7 @@ class Solution(object):
         """
         :type n: int
         :rtype: bool
-        
+        """
         #BRUTE FORCE 
         if n <=0:
             return False
@@ -12,7 +12,7 @@ class Solution(object):
         return n==1
         TC:O(log n)
         SC:O(1)
-        """
+        
         #optimal Approach 
         return n>0 and(n&(n-1))==0
         TC:O(1)
