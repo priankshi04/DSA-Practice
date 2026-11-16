@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.next = next
 class Solution(object):
-    def mergeTwoLists(self, list1, list2):
+    def mergeTwoLists(self, list1, list2): 
         """
         :type list1: Optional[ListNode]
         :type list2: Optional[ListNode]
